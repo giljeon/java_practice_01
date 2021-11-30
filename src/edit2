@@ -1,0 +1,242 @@
+getStaffId
+Value : 28
+Value : 28
+
+=========
+getStaffInfoId
+Value : 7
+Value : 7
+
+=========
+getParentsOrgId
+Value : 1
+Value : 1
+
+=========
+getParentsOrgName
+Value : ST본사
+Value : ST본사
+
+=========
+getChildOrgId
+Value : 0
+Value : 0
+
+=========
+getChildOrgName
+Value : 
+Value : 선택안함
+
+=========
+getStaffTeamName
+Value : 유초등개발팀
+Value : 유초등개발팀
+
+=========
+getLdapId
+Value : chocochoi
+Value : chocochoi
+
+=========
+getStaffName
+Value : 최치연/유초등개발팀
+Value : 최치연/유초등개발팀
+
+=========
+getStaffPositionCode
+Value : SP1001
+Value : SP1001
+
+=========
+getStaffPositionName
+Value : 팀원
+Value : 팀원
+
+=========
+getStaffGradeCode
+Value : ST1004
+Value : ST1004
+
+=========
+getStaffGradeName
+Value : CD
+Value : CD
+
+=========
+getContractStartDate
+Value : 
+Value : 
+
+=========
+getContractEndDate
+Value : 
+Value : 
+
+=========
+getAppointDate
+Value : 2020-06-25
+Value : 2020-06-25
+
+=========
+getPostCode
+Value : 
+Value : 
+
+=========
+getRoadAddress
+Value : 
+Value : 
+
+=========
+getDetailAddress
+Value : 
+Value : 
+
+=========
+getPhone
+Value : 
+Value : 
+
+=========
+getEmail
+Value : 
+Value : 
+
+=========
+getContractDocumentCheck
+Value : N
+Value : N
+
+=========
+getBankbookDocumentCheck
+Value : N
+Value : N
+
+=========
+getIdentityDocumentCheck
+Value : N
+Value : N
+
+=========
+getAccountBankCode
+Value : BK04
+Value : BK04
+
+=========
+getAccountBankName
+Value : 국민은행
+Value : 국민은행
+
+=========
+getAccountNumber
+Value : fbNakOJqUhjodN+37Q0fzg==
+Value : ●●●●●●●●●●●●●●●●●●●●●●●●
+
+=========
+getAccountName
+Value : 최치연
+Value : 최치연
+
+=========
+getReferenceMemo
+Value : 개발팀 테스트 중입니다.
+양해 부탁 드립니다.
+Value : 개발팀 테스트 중입니다.
+양해 부탁 드립니다.
+
+=========
+getCorporateName
+Value : 
+Value : 
+
+=========
+getRegionCode
+Value : RG0001
+Value : RG0001
+
+=========
+getRegionName
+Value : 서울특별시
+Value : 서울특별시
+
+=========
+getBusinessLicenseNumber
+Value : 
+Value : 
+
+=========
+getIdentityFrontNumber
+Value : 
+Value : 
+
+=========
+getIdentityRearNumber
+Value : 
+Value : 
+
+=========
+getCommissionId
+Value : 0
+Value : 0
+
+=========
+getAppointTypeCode
+Value : 
+Value : 
+
+=========
+getAppointTypeName
+Value : 
+Value : 
+
+=========
+getRecruitTypeCode
+Value : 
+Value : 
+
+=========
+getRecruitTypeName
+Value : 
+Value : 
+
+=========
+getRecruitChannelCode
+Value : 
+Value : 
+
+=========
+getRecruitChannelName
+Value : 
+Value : 
+
+=========
+getRecruitRecommendMemo
+Value : 
+Value : 
+
+=========
+getFinalEducationalCode
+Value : FE1001
+Value : FE1001
+
+=========
+getFinalEducationalName
+Value : 초졸
+Value : 초졸
+
+=========
+getMarryYn
+Value : 
+Value : 
+
+=========
+getMarryDate
+Value : 
+Value : 
+
+=========
+getWorkYn
+Value : Y
+Value : Y
+
+=========

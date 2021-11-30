@@ -1,0 +1,51 @@
+1. 공통 LNB
+ 1) DAECHI_COMM_LNB
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=REFFQ0hJX0NPTU1fTE5C"></a>
+
+2. 일간대치동
+ 1) DAECHI_PC_SEVICE_SMALL
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=REFFQ0hJX1BDX1NFVklDRV9TTUFMTA=="></a>
+ 2) DAECHI_PC_SEVICE_LARGE
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=REFFQ0hJX1BDX1NFVklDRV9MQVJHRQ=="></a>
+ 3) DAECHI_PC_SEVICE_FLOATING
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=REFFQ0hJX1BDX1NFVklDRV9GTE9BVElORw=="></a>
+ 4) DAECHI_MOBILE_SEVICE_SMALL
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=REFFQ0hJX01PQklMRV9TRVZJQ0VfU01BTEw="></a>
+ 5) DAECHI_MOBILE_SEVICE_LARGE
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=REFFQ0hJX01PQklMRV9TRVZJQ0VfTEFSR0U="></a>
+
+3. 키즈스콜레
+ 1) KIDSSCHOLE_PC_MAIN_LARGE
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=S0lEU1NDSE9MRV9QQ19NQUlOX0xBUkdF"></a>
+ 2) KIDSSCHOLE_PC_SEVICE_SMALL
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=S0lEU1NDSE9MRV9QQ19TRVZJQ0VfU01BTEw="></a>
+ 3) KIDSSCHOLE_PC_SEVICE_LARGE
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=S0lEU1NDSE9MRV9QQ19TRVZJQ0VfTEFSR0U="></a>
+ 4) KIDSSCHOLE_MOBILE_MAIN_LARGE
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=S0lEU1NDSE9MRV9NT0JJTEVfTUFJTl9MQVJHRQ=="></a>
+
+3. 튜터닷컴
+ 1) TUTOR_PC_MAIN_FLOATING
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=VFVUT1JfUENfTUFJTl9GTE9BVElORw=="></a>
+ 2) TUTOR_PC_SEVICE_LEANING
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=VFVUT1JfUENfU0VWSUNFX0xFQU5JTkc="></a>
+ 3) TUTOR_PC_SEVICE_TEACHING
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=VFVUT1JfUENfU0VWSUNFX1RFQUNISU5H"></a>
+ 4) TUTOR_PC_SEVICE_FLOATING
+ - ex) <a href="$!link.getContextPath()/dyn/evt/sky_qna?loc=VFVUT1JfUENfU0VWSUNFX0ZMT0FUSU5H"></a>
+
+
+"DAECHI_COMM_LNB"
+,"DAECHI_PC_SEVICE_SMALL"
+,"DAECHI_PC_SEVICE_LARGE"
+,"DAECHI_PC_SEVICE_FLOATING"
+,"DAECHI_MOBILE_SEVICE_SMALL"
+,"DAECHI_MOBILE_SEVICE_LARGE"
+,"KIDSSCHOLE_PC_MAIN_LARGE"
+,"KIDSSCHOLE_PC_SEVICE_SMALL"
+,"KIDSSCHOLE_PC_SEVICE_LARGE"
+,"KIDSSCHOLE_MOBILE_MAIN_LARGE"
+,"TUTOR_PC_MAIN_FLOATING"
+,"TUTOR_PC_SEVICE_LEANING"
+,"TUTOR_PC_SEVICE_TEACHING"
+,"TUTOR_PC_SEVICE_FLOATING"

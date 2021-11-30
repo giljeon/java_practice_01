@@ -1,0 +1,11 @@
+###
+
+GET https://biz-dev-api.gooroomee.com/api/v1/room/list?userEmail=grm13@gooroomee.com&page=1&limit=10
+Content-Type: application/x-www-form-urlencoded; charset=utf-8;
+X-GRM-AuthToken: aaaabbbb
+
+###
+
+GET https://bizapi.gooroomee.com/api/v1/room/list?userEmail=grm13@gooroomee.com&page=1&limit=10
+Content-Type: application/x-www-form-urlencoded; charset=utf-8;
+X-GRM-AuthToken: azzzzzzzza
