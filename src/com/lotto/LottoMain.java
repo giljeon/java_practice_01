@@ -15,7 +15,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Array;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class LottoMain {
 
@@ -28,6 +30,7 @@ public class LottoMain {
     // 통계에 필요한 번호 VO
     static NumberVO voClass = new NumberVO();
 
+    private static ArrayList<String> repeatArray = new ArrayList<>();
     /**
      * Main
      *
@@ -41,9 +44,135 @@ public class LottoMain {
         // 역대 정보를 가져옴
         //getWinNumber();
 
-        // 예상 로또 번호를 출력함
-        createLottoNumbers(5);
         //getOneYearsMatchingNumberList("16,19,24,33,42,44");
+
+        // 생성 번호에 비례 1등 나올 카운트 체크
+        //checkLottoNumbers();
+
+        // 예상 로또 번호를 출력함
+        //createLottoNumbers(5);
+
+        // 로또 번호 출력 강제 횟수 지성 해당 횟수만큼 생성 후 번호 뽑기
+        createRepeatLottoNumbers();
+    }
+
+    private static void createRepeatLottoNumbers() {
+        int[] repeatCountArray = {4385, 8751, 13192, 743, 428};
+        
+        for (int repeat : repeatCountArray) {
+            getRepeatLottoNumber(repeat);
+        }
+        
+    }
+
+    private static void getRepeatLottoNumber(int repeat) {
+        String[] lastArray = voClass.getLastNumberArray();
+        int[] lotNumberArray = voClass.getLotNumberArray();
+
+        for (int re = 0; re < repeat; re ++) {
+
+            // 번호별 확률 통계를 통해 1 ~ 45의 숫자를 넣을 List 선언
+            List<Integer> chanceNumbertList = new ArrayList<Integer>();
+
+            // NUMBER_LOT_ARRAY 배열의 각 index == 로또번호, index의 value == 해당 index 번호의 반복 횟수
+            for (int index = 0; index < lotNumberArray.length; index++) {
+
+                // Min : 많이 안나온 숫자의 확률을 더 높임
+                //for (int valCnt = 0; valCnt < (MIN_NUMBER_ROLLING - lotNumberArray[index]) ; valCnt++) {
+
+                // Max : 많이 나온 숫자의 확률을 더 높임
+                for (int valCnt = 0; valCnt < lotNumberArray[index]; valCnt++) {
+                    chanceNumbertList.add(index + MAGIC_NUMBER_ONE);
+                }
+            }
+
+            // 번호별 확률 통계에 의해 삽입한 List의 value를 무작위로 배치(섞기)
+            Collections.shuffle(chanceNumbertList);
+            List<Integer> lottoNumberList = getLotSixNumber(chanceNumbertList);
+
+//            boolean flag = true;
+//            while (flag) {
+//                if (tempCompare(lottoNumberList)) {
+//                    lottoNumberList = getLotSixNumber(chanceNumbertList);
+//                } else {
+//                    flag = false;
+//                }
+//            }
+
+            List<String> strLottoNumberList = lottoNumberList.stream().map(Object::toString).collect(Collectors.toList());
+            String strLottoNumber = String.join("", strLottoNumberList);
+            if (re != (repeat - 1)) {
+                repeatArray.add(strLottoNumber);
+            }
+
+            if (re == (repeat - 1)) {
+                if (Arrays.stream(lastArray).anyMatch(i -> i.equals(strLottoNumber))) {
+                    System.out.println("repeat fail lastArray: " + repeat + "," + strLottoNumber);
+                } else {
+                    if (repeatArray.stream().anyMatch(r -> r.equals(strLottoNumber))) {
+                        System.out.println("repeat fail repeatArray: " + repeat + "," + strLottoNumber);
+                    } else {
+                        if(tempCompare(lottoNumberList)) {
+                            System.out.println("repeat fail tempCompare: " + repeat + "," + strLottoNumber);
+                        } else {
+                            System.out.println(lottoNumberList.toString());
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private static boolean tempCompare(List<Integer> lottoNumberList) {
+        int[] todayRemoveArray = voClass.getTodayRemoveNumber();
+
+        for (int item : todayRemoveArray) {
+            if (lottoNumberList.indexOf(item) != -1) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static void checkLottoNumbers() {
+        String[] lastArray = voClass.getLastNumberArray();
+        int[] lotNumberArray = voClass.getLotNumberArray();
+
+        boolean isFind = true;
+        int count = 0;
+        while (isFind) {
+
+            // 번호별 확률 통계를 통해 1 ~ 45의 숫자를 넣을 List 선언
+            List<Integer> chanceNumbertList = new ArrayList<Integer>();
+
+            // NUMBER_LOT_ARRAY 배열의 각 index == 로또번호, index의 value == 해당 index 번호의 반복 횟수
+            for (int index = 0; index < lotNumberArray.length; index++) {
+
+                // Min : 많이 안나온 숫자의 확률을 더 높임
+                //for (int valCnt = 0; valCnt < (MIN_NUMBER_ROLLING - lotNumberArray[index]) ; valCnt++) {
+
+                // Max : 많이 나온 숫자의 확률을 더 높임
+                for (int valCnt = 0; valCnt < lotNumberArray[index]; valCnt++) {
+                    chanceNumbertList.add(index + MAGIC_NUMBER_ONE);
+                }
+            }
+
+            // 번호별 확률 통계에 의해 삽입한 List의 value를 무작위로 배치(섞기)
+            Collections.shuffle(chanceNumbertList);
+            List<Integer> lottoNumberList = getLotSixNumber(chanceNumbertList);
+
+            List<String> strLottoNumberList = lottoNumberList.stream().map(Object::toString).collect(Collectors.toList());
+            String strLottoNumber = String.join("", strLottoNumberList);
+
+            if (Arrays.stream(lastArray).anyMatch(i -> i.equals(strLottoNumber))) {
+                isFind = false;
+                System.out.println("LottoNumber : " + strLottoNumber);
+            }
+            count ++;
+        }
+
+        System.out.println("result count : " +  count);
     }
 
     private static void getOneYearsMatchingNumberList(String strNumbers) {
@@ -144,8 +273,8 @@ public class LottoMain {
 
     private static void getWinNumber() {
         // 1. 접속 URL 선언
-        int startNum = 982;
-        int endNum = 983;
+        int startNum = 1013;
+        int endNum = 1014;
 
         // 개행 카운터
         int count = 0;
@@ -210,7 +339,7 @@ public class LottoMain {
      * 번호를 가져옴
      */
     private static String getLottoNumber() {
-        // 번호별 당청 통계 정보 배열을 가져옴
+        // 번호별 당첨 통계 정보 배열을 가져옴
         int[] lotNumberArray = voClass.getLotNumberArray();
 
         // 번호별 확률 통계를 통해 1 ~ 45의 숫자를 넣을 List 선언
