@@ -2,8 +2,8 @@ package com.lotto;
 
 
 import com.Utils;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,7 +15,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
